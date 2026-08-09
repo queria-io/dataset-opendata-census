@@ -1,0 +1,46 @@
+schema: ods
+name: portal
+title: 観測対象のオープンデータカタログ
+description: |-
+  1行 = 観測したカタログ。measurement の観測範囲を示す。
+  観測に失敗したカタログも status に理由を入れて残すので、
+  「測っていない」と「測ったが見つからない」を区別できる。
+
+  個別自治体のサブサイト（odcs.bodik.jp/<団体コード>/ など）は多くが CMS のフロントで
+  API を持たないため、横断カタログ側から一括で観測する。
+  organization_count と lg_organization_count の差は、団体コードを持たない組織
+  （都市圏連携組織・研究機関など）の数で、その名前は non_lg_organizations にある。
+
+  出典: 各カタログの CKAN API を Queria が観測して作成。
+keywords:
+  - オープンデータ
+  - カタログ
+  - CKAN
+published: true
+fields:
+  - name: portal_id
+    title: カタログID
+  - name: title
+    title: カタログ名
+  - name: operator
+    title: 運営者
+  - name: site_url
+    title: サイトURL
+  - name: api_base
+    title: API のベースURL
+  - name: catalog_type
+    title: カタログの種別
+    description: ckan など
+  - name: organization_count
+    title: 登録組織数
+  - name: lg_organization_count
+    title: うち団体コードを持つ組織数
+    description: measurement の対象になった組織の数
+  - name: non_lg_organizations
+    title: 団体コードを持たない組織
+    description: セミコロン区切り
+  - name: status
+    title: 観測の結果
+    description: measured または failed:<理由>
+  - name: measured_on
+    title: 観測日

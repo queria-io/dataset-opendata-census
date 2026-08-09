@@ -1,0 +1,61 @@
+schema: ods
+name: measurement
+title: 自治体標準ODS 項目別の公開状況
+description: |-
+  1行 = 団体 × 自治体標準オープンデータセットの項目 × 観測。
+  観測対象カタログに参加している団体すべてについて、31項目それぞれを公開しているかを持つ。
+  公開していない組み合わせも is_published = false の行として存在するので、
+  「出していない」を数えるのに LEFT JOIN は要らない。
+
+  判定はデータセット名（タイトル）の部分一致による近似で、公式の公表値ではない。
+  項目ごとの検索語は item テーブルの search_words にあり、語ごとのヒット数は
+  search_word_hit テーブルで検証できる。タイトルに項目名を含まないデータセットは
+  拾えないため、実際の公開状況より少なく出る方向に偏る。
+
+  観測範囲は portal テーブルが示す。そこに含まれない団体はこのテーブルに行が無く、
+  それは「公開していない」ではなく「観測していない」を意味する。
+  全国の団体を分母にするときは lg_code データセットと突き合わせる。
+
+  出典: 各カタログの CKAN API を Queria が観測して作成。
+keywords:
+  - オープンデータ
+  - 自治体標準オープンデータセット
+  - 公開状況
+  - デジタル庁
+  - 自治体
+published: true
+sources:
+  - title: 自治体標準オープンデータセット（デジタル庁）
+    path: https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test
+fields:
+  - name: lg_code
+    title: 全国地方公共団体コード
+    description: 6桁（検査数字付き）。カタログの organization 名から取得
+    semantic: { role: entity, name: city }
+  - name: lg_code_5
+    title: 全国地方公共団体コード（5桁）
+    description: 検査数字を除いた先頭5桁
+  - name: prefecture_code
+    title: 都道府県コード
+    description: 団体コードの先頭2桁
+    semantic: { role: entity, name: prefecture }
+  - name: item_no
+    title: 項目番号
+    description: 自治体標準オープンデータセット一覧の1〜31
+  - name: item_key
+    title: 項目キー
+  - name: item_label
+    title: 項目名
+  - name: definition_book
+    title: データ項目定義書
+    description: A〜H。策定省庁がデジタル庁以外の項目は E〜H
+  - name: is_published
+    title: 公開しているか
+    description: 観測時点でタイトル一致のデータセットが1件以上あれば true
+  - name: dataset_count
+    title: 一致したデータセット数
+    description: 検索語をまたぐ重複計上を避けるため、語ごとの件数の最大値
+  - name: portal_id
+    title: 観測したカタログ
+  - name: measured_on
+    title: 観測日

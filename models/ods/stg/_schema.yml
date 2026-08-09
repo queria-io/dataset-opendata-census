@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_measurement
+    description: 観測結果に型を付け、団体コードの派生列を足したもの
+  - name: stg_item
+    description: 項目定義に型を付けたもの
+  - name: stg_portal
+    description: カタログ記録に型を付けたもの
+  - name: stg_word_hit
+    description: 検索語ごとのヒット数に型を付けたもの

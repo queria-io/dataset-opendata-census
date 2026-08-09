@@ -1,0 +1,19 @@
+name: "opendata_census"
+version: "1.0.0"
+
+profile: "opendata_census"
+
+model-paths: ["models"]
+macro-paths: ["macros", "shared/macros"]
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  opendata_census:
+    +database: opendata_census
+    ods:
+      raw:
+        +materialized: table
+      stg:
+        +materialized: view
+      mart:
+        +materialized: view

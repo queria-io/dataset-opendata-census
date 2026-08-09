@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: measurement
+    description: 1行 = 団体 × 項目 × 観測。自治体標準ODS 31項目の公開状況
+    columns:
+      - name: lg_code
+        description: 全国地方公共団体コード（6桁）
+        data_tests: [not_null]
+      - name: item_no
+        description: 項目番号（1〜31）
+        data_tests: [not_null]
+      - name: is_published
+        description: 観測時点で公開を確認できたか
+        data_tests: [not_null]
+  - name: item
+    description: 自治体標準オープンデータセットの31項目
+    columns:
+      - name: item_no
+        description: 項目番号（1〜31）
+        data_tests: [unique, not_null]
+      - name: item_key
+        description: 項目キー
+        data_tests: [unique, not_null]
+  - name: portal
+    description: 観測対象のオープンデータカタログ
+    columns:
+      - name: portal_id
+        description: カタログID
+        data_tests: [unique, not_null]
+  - name: search_word_hit
+    description: 検索語ごとのヒット数（判定根拠）
+    columns:
+      - name: search_word
+        description: 検索語
+        data_tests: [not_null]

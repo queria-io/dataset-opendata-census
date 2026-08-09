@@ -1,0 +1,35 @@
+schema: ods
+name: item
+title: 自治体標準オープンデータセットの項目
+description: |-
+  1行 = 自治体標準オープンデータセットの1項目。31項目を収録する。
+  デジタル庁が様式を公開しているもの（定義書A〜D）と、各府省庁等が様式を定めているもの
+  （E: 国土交通省 地質・土質調査成果電子納品要領、F: 都市計画基礎調査、
+  G: デジタル社会推進実践ガイドブック DS-451-8 調達、H: 標準的なバス情報フォーマット）がある。
+
+  search_words は measurement の判定に使った検索語で、セミコロン区切り。
+  判定の根拠を検証したり、語を足して測り直したりするために公開する。
+
+  出典: デジタル庁「自治体標準オープンデータセット（正式版）」
+keywords:
+  - 自治体標準オープンデータセット
+  - デジタル庁
+  - オープンデータ
+published: true
+sources:
+  - title: 自治体標準オープンデータセット（デジタル庁）
+    path: https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test
+fields:
+  - name: item_no
+    title: 項目番号
+    description: 自治体標準オープンデータセット一覧の1〜31
+  - name: item_key
+    title: 項目キー
+  - name: item_label
+    title: 項目名
+  - name: definition_book
+    title: データ項目定義書
+    description: A〜H
+  - name: search_words
+    title: 判定に使った検索語
+    description: セミコロン区切り。いずれか1つでもタイトルに一致すれば公開と判定する

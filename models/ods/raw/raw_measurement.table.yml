@@ -1,0 +1,17 @@
+tables:
+  - schema: ods
+    name: raw_measurement
+    description: 団体 × 項目の観測結果の生データ。全列 VARCHAR。
+    published: false
+  - schema: ods
+    name: raw_item
+    description: 自治体標準ODS 31項目の定義の生データ。全列 VARCHAR。
+    published: false
+  - schema: ods
+    name: raw_portal
+    description: 観測対象カタログの生データ。全列 VARCHAR。
+    published: false
+  - schema: ods
+    name: raw_word_hit
+    description: 検索語ごとのヒット数の生データ。全列 VARCHAR。
+    published: false

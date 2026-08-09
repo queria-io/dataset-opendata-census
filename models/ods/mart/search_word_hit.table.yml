@@ -1,0 +1,35 @@
+schema: ods
+name: search_word_hit
+title: 検索語ごとのヒット数
+description: |-
+  1行 = カタログ × 項目 × 検索語。measurement の判定根拠。
+  ある項目の団体数が少ないとき、それが本当に公開が少ないのか、
+  検索語が実際のデータセット名と合っていないだけなのかを、ここで切り分けられる。
+
+  dataset_count はカタログ全体での件数で、団体数ではない。
+  status が failed の行は、その語の観測が失敗したことを示す。
+
+  出典: 各カタログの CKAN API を Queria が観測して作成。
+keywords:
+  - オープンデータ
+  - 判定根拠
+published: true
+fields:
+  - name: portal_id
+    title: カタログID
+  - name: item_no
+    title: 項目番号
+  - name: item_key
+    title: 項目キー
+  - name: item_label
+    title: 項目名
+  - name: search_word
+    title: 検索語
+  - name: dataset_count
+    title: タイトル一致したデータセット数
+    description: カタログ全体での件数。団体数ではない
+  - name: status
+    title: 観測の結果
+    description: ok または failed
+  - name: measured_on
+    title: 観測日

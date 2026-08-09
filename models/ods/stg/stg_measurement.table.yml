@@ -1,0 +1,17 @@
+tables:
+  - schema: ods
+    name: stg_measurement
+    description: 観測結果に型を付けたもの
+    published: false
+  - schema: ods
+    name: stg_item
+    description: 項目定義に型を付けたもの
+    published: false
+  - schema: ods
+    name: stg_portal
+    description: カタログ記録に型を付けたもの
+    published: false
+  - schema: ods
+    name: stg_word_hit
+    description: 検索語ごとのヒット数に型を付けたもの
+    published: false
