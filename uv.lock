@@ -148,7 +148,7 @@ dependencies = [
 requires-dist = [
     { name = "dbt-core", specifier = ">=1.11.2" },
     { name = "dbt-duckdb", specifier = ">=1.10.0" },
-    { name = "queria", specifier = ">=0.13.0" },
+    { name = "queria", specifier = ">=0.22.0" },
 ]
 
 [[package]]
@@ -758,16 +758,16 @@ wheels = [
 
 [[package]]
 name = "queria"
-version = "0.21.0"
+version = "0.25.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "duckdb" },
     { name = "jsonschema" },
     { name = "pyyaml" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/9b/ac/c34e2507f7181f58996ff5269cb84bc4582d3c80cc3911b28f5114eda64c/queria-0.21.0.tar.gz", hash = "sha256:1129eb40a27da505233a370144347a92becbca18998ed1c67b44f18c82848d3c", size = 294854, upload-time = "2026-08-03T02:17:07.061Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f8/7e/d0fa4c50b44041b8911cfa9574ae5907a97c374ac70ef5c2bdb73a8bfd53/queria-0.25.0.tar.gz", hash = "sha256:4fa8e7d5e120a66baa015fadd1c042eeddca0987250c9f128692da50a1e3797f", size = 346196, upload-time = "2026-09-16T09:23:02.714Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/50/fd/3a7968171d0fc974b07770bb7ab7ef27ebfb264565c8b80a6cd5c4ee7fa9/queria-0.21.0-py3-none-any.whl", hash = "sha256:8a978721897c00f2eaba106410ffc207a36c68f1925cc60bb735ad386895239f", size = 110789, upload-time = "2026-08-03T02:17:05.351Z" },
+    { url = "https://files.pythonhosted.org/packages/96/c6/0bd299c32dd3a542530d0145bb91f07a4e3672e4e0a26fc4a7c6c76c5795/queria-0.25.0-py3-none-any.whl", hash = "sha256:89499965bca341b842de271e4c465e498f44072d0dbcb68568307d93b69cda32", size = 135904, upload-time = "2026-09-16T09:23:01.418Z" },
 ]
 
 [[package]]
