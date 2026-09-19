@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "自治体オープンデータの公開状況を観測して公開するデータセット"
 requires-python = ">=3.13"
 dependencies = [
-    "queria>=0.13.0",
+    "queria>=0.22.0",
     "dbt-core>=1.11.2",
     "dbt-duckdb>=1.10.0",
 ]
