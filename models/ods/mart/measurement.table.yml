@@ -35,6 +35,7 @@ fields:
   - name: lg_code_5
     title: 全国地方公共団体コード（5桁）
     description: 検査数字を除いた先頭5桁
+    semantic: { role: entity, name: city }
   - name: prefecture_code
     title: 都道府県コード
     description: 団体コードの先頭2桁
