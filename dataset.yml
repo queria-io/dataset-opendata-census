@@ -18,6 +18,7 @@ keywords:
   - オープンデータカタログ
 homepage: https://github.com/queria-io/dataset-opendata-census
 language: ja
+themes: [government_finance]
 
 licenses:
   - CC-BY-4.0
