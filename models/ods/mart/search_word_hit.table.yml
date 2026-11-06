@@ -2,14 +2,9 @@ schema: ods
 name: search_word_hit
 title: 検索語ごとのヒット数
 description: |-
-  1行 = カタログ × 項目 × 検索語。measurement の判定根拠。
-  ある項目の団体数が少ないとき、それが本当に公開が少ないのか、
-  検索語が実際のデータセット名と合っていないだけなのかを、ここで切り分けられる。
+  カタログ × 項目 × 検索語ごとのヒット数で、measurement の判定の根拠です。
 
-  dataset_count はカタログ全体での件数で、団体数ではない。
-  status が failed の行は、その語の観測が失敗したことを示す。
-
-  出典: 各カタログの CKAN API を Queria が観測して作成。
+  - dataset_count はカタログ全体のデータセット数で、団体の数ではありません
 keywords:
   - オープンデータ
   - 判定根拠
