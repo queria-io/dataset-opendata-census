@@ -1,4 +1,6 @@
-spec_version: "0.1"
+# この dataset.yml は fdl commit が読む（FDL の dataset.json を YAML で書いたもの）。
+# 表の説明は models/ の *.table.yml に書く。表と列の型・NULL・行数は fdl commit がカタログから埋める。
+# Queria だけの項目（テーマ・カバー・AI 向けの説明・列の意味）は annotations.queria に書く。
 name: opendata_census
 title: 自治体オープンデータの公開状況
 description: |-
@@ -15,7 +17,6 @@ keywords:
   - オープンデータカタログ
 homepage: https://github.com/queria-io/dataset-opendata-census
 language: ja
-themes: [government_finance]
 
 licenses:
   - CC-BY-4.0
@@ -33,8 +34,11 @@ contributors:
 
 spatial_coverage: [JP]
 update_frequency: monthly
-cover: 🗾
 
 schemas:
   - name: ods
     title: 自治体標準オープンデータセット
+annotations:
+  queria:
+    themes: [government_finance]
+    cover: 🗾

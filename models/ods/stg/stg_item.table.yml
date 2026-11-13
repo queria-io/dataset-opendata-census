@@ -1,0 +1,6 @@
+schema: ods
+name: stg_item
+description: 項目定義に型を付けたもの
+annotations:
+  queria:
+    published: false

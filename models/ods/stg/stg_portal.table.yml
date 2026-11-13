@@ -1,0 +1,6 @@
+schema: ods
+name: stg_portal
+description: カタログ記録に型を付けたもの
+annotations:
+  queria:
+    published: false

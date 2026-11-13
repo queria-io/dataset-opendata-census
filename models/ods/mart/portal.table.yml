@@ -9,7 +9,6 @@ keywords:
   - オープンデータ
   - カタログ
   - CKAN
-published: true
 fields:
   - name: portal_id
     title: カタログID

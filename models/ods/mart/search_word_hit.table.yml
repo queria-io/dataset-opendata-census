@@ -8,7 +8,6 @@ description: |-
 keywords:
   - オープンデータ
   - 判定根拠
-published: true
 fields:
   - name: portal_id
     title: カタログID
