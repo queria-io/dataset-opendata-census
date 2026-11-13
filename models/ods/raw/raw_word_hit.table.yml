@@ -1,0 +1,6 @@
+schema: ods
+name: raw_word_hit
+description: 検索語ごとのヒット数の生データ。全列 VARCHAR。
+annotations:
+  queria:
+    published: false

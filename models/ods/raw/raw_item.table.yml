@@ -1,0 +1,6 @@
+schema: ods
+name: raw_item
+description: 自治体標準ODS 31項目の定義の生データ。全列 VARCHAR。
+annotations:
+  queria:
+    published: false

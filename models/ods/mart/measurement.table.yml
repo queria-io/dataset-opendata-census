@@ -12,7 +12,6 @@ keywords:
   - 公開状況
   - デジタル庁
   - 自治体
-published: true
 sources:
   - title: 自治体標準オープンデータセット（デジタル庁）
     path: https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test
@@ -20,15 +19,15 @@ fields:
   - name: lg_code
     title: 全国地方公共団体コード
     description: 6桁（検査数字付き）。カタログの organization 名から取得
-    semantic: { role: entity, name: city }
+    annotations: { queria: { semantic: { role: entity, name: city } } }
   - name: lg_code_5
     title: 全国地方公共団体コード（5桁）
     description: 検査数字を除いた先頭5桁
-    semantic: { role: entity, name: city }
+    annotations: { queria: { semantic: { role: entity, name: city } } }
   - name: prefecture_code
     title: 都道府県コード
     description: 団体コードの先頭2桁
-    semantic: { role: entity, name: prefecture }
+    annotations: { queria: { semantic: { role: entity, name: prefecture } } }
   - name: item_no
     title: 項目番号
     description: 自治体標準オープンデータセット一覧の1〜31

@@ -1,0 +1,6 @@
+schema: ods
+name: stg_word_hit
+description: 検索語ごとのヒット数に型を付けたもの
+annotations:
+  queria:
+    published: false

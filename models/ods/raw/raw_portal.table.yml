@@ -1,0 +1,6 @@
+schema: ods
+name: raw_portal
+description: 観測対象カタログの生データ。全列 VARCHAR。
+annotations:
+  queria:
+    published: false
