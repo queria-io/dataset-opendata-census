@@ -1,6 +1,0 @@
-schema: ods
-name: stg_measurement
-description: 観測結果に型を付けたもの
-annotations:
-  queria:
-    published: false

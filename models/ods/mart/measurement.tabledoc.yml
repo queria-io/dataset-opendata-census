@@ -1,33 +1,31 @@
-schema: ods
-name: measurement
+$schema: https://tabledoc.queria.io/schemas/table/v1.json
 title: 自治体標準ODS 項目別の公開状況
 description: |-
   団体 × 項目ごとに、自治体標準オープンデータセットを公開しているかどうかを観測した結果です。公開していない組み合わせも is_published = false の行で持ちます。
 
   - 判定はデータセット名の部分一致による近似で、公式の値ではありません。実際より少なく出る傾向があります
   - 観測していないカタログの団体は行がありません。全国の団体を分母にするときは lg_code と結合してください
-keywords:
+topics:
   - オープンデータ
   - 自治体標準オープンデータセット
   - 公開状況
   - デジタル庁
   - 自治体
 sources:
-  - title: 自治体標準オープンデータセット（デジタル庁）
-    path: https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test
-fields:
+  - municipal-standard-data-set-test
+columns:
   - name: lg_code
     title: 全国地方公共団体コード
     description: 6桁（検査数字付き）。カタログの organization 名から取得
-    annotations: { queria: { semantic: { role: entity, name: city } } }
+    entity: city
   - name: lg_code_5
     title: 全国地方公共団体コード（5桁）
     description: 検査数字を除いた先頭5桁
-    annotations: { queria: { semantic: { role: entity, name: city } } }
+    entity: city
   - name: prefecture_code
     title: 都道府県コード
     description: 団体コードの先頭2桁
-    annotations: { queria: { semantic: { role: entity, name: prefecture } } }
+    entity: prefecture
   - name: item_no
     title: 項目番号
     description: 自治体標準オープンデータセット一覧の1〜31

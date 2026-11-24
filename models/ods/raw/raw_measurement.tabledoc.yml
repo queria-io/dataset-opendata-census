@@ -1,6 +1,3 @@
-schema: ods
-name: raw_measurement
+$schema: https://tabledoc.queria.io/schemas/table/v1.json
 description: 団体 × 項目の観測結果の生データ。全列 VARCHAR。
-annotations:
-  queria:
-    published: false
+hidden: true
