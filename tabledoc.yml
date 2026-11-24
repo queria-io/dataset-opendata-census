@@ -1,0 +1,38 @@
+$schema: https://tabledoc.queria.io/schemas/dataset/v1.json
+name: opendata_census
+title: 自治体オープンデータの公開状況
+description: |-
+  全国の自治体が、デジタル庁の自治体標準オープンデータセット 31 項目を公開しているかどうかを、各オープンデータカタログの API から観測した記録です。判定に使った検索語とヒット数も持つので、判定の根拠を確認できます。
+
+  出典：各カタログの CKAN API を Queria が観測して作成。
+image: cover.png
+topics:
+  - オープンデータ
+  - 自治体標準オープンデータセット
+  - 公開状況
+  - デジタル庁
+  - 自治体
+  - CKAN
+  - オープンデータカタログ
+language: ja
+licenses:
+  - CC-BY-4.0
+sources:
+  - id: municipal-standard-data-set-test
+    title: 自治体標準オープンデータセット（デジタル庁）
+    url: https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test
+  - id: data
+    title: BODIK ODCS 横断カタログ
+    url: https://data.bodik.jp/
+contributors:
+  - id: flo8s
+    title: FLOPS
+    url: https://flo8s.com/
+    roles:
+      - rightsHolder
+spatial_coverage:
+  - JP
+update_frequency: monthly
+schemas:
+  - name: ods
+    title: 自治体標準オープンデータセット

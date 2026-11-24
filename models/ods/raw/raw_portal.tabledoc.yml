@@ -1,6 +1,3 @@
-schema: ods
-name: raw_portal
+$schema: https://tabledoc.queria.io/schemas/table/v1.json
 description: 観測対象カタログの生データ。全列 VARCHAR。
-annotations:
-  queria:
-    published: false
+hidden: true

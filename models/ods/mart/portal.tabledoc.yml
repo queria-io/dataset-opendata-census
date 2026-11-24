@@ -1,17 +1,17 @@
-schema: ods
-name: portal
+$schema: https://tabledoc.queria.io/schemas/table/v1.json
 title: 観測対象のオープンデータカタログ
 description: |-
   観測したオープンデータカタログの一覧です。measurement の観測範囲を表します。
 
   - 観測に失敗したカタログも、status に理由を入れて残しています
-keywords:
+topics:
   - オープンデータ
   - カタログ
   - CKAN
-fields:
+columns:
   - name: portal_id
     title: カタログID
+    description: カタログID
   - name: title
     title: カタログ名
   - name: operator

@@ -1,14 +1,13 @@
-schema: ods
-name: search_word_hit
+$schema: https://tabledoc.queria.io/schemas/table/v1.json
 title: 検索語ごとのヒット数
 description: |-
   カタログ × 項目 × 検索語ごとのヒット数で、measurement の判定の根拠です。
 
   - dataset_count はカタログ全体のデータセット数で、団体の数ではありません
-keywords:
+topics:
   - オープンデータ
   - 判定根拠
-fields:
+columns:
   - name: portal_id
     title: カタログID
   - name: item_no
@@ -19,6 +18,7 @@ fields:
     title: 項目名
   - name: search_word
     title: 検索語
+    description: 検索語
   - name: dataset_count
     title: タイトル一致したデータセット数
     description: カタログ全体での件数。団体数ではない
